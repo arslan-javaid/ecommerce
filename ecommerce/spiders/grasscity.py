@@ -12,7 +12,7 @@ class GrasscitySpider(scrapy.Spider):
     def __init__(self, config=None, *args, **kwargs):
 
         try:
-            data = pkgutil.get_data('spiders',config)
+            data = pkgutil.get_data('ecommerce.spiders',config)
             print("Data obtained from config: ", data)
             self.json_config = json.loads(data)
         except IOError as FileNotFoundException:
