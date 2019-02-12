@@ -1,46 +1,85 @@
 # -*- coding: utf-8 -*-
-from scrapy import Spider
+import scrapy
+from scrapy.exceptions import CloseSpider
+from scrapy.http import Request
+import json
+import pkgutil
 
 
-class GrasscitySpider(Spider):
+class GrasscitySpider(scrapy.Spider):
     name = 'grasscity'
 
-    list_rules = {
-        'css': {
-            'price': '.add-to-cart-wrapper .old-price .price::text',
-            'sales-price': '.add-to-cart-wrapper .special-price .price::text',
-            'images': '.MagicToolboxSelectorsContainer a::attr(href)',
-            'categories': '.breadcrumbs li a::text',
-            'brand': '.block-attributes .data::text',
-            'description': '.block-description .block-content',
-        },
-        'xpath': {
-            'product_name': '//h1/text()',
-        }
-    }
+    def __init__(self, config=None, *args, **kwargs):
 
-    def __init__(self):
-        self.url = "https://www.grasscity.eu/grasscity-the-weezy-jack-pod-smoking-pipe.html?___store=eu_en&nosto=new-products-home"
-        self.start_urls = [self.url]
+        try:
+            data = pkgutil.get_data('spiders',config)
+            print("Data obtained from config: ", data)
+            self.json_config = json.loads(data)
+        except IOError as FileNotFoundException:
+            raise CloseSpider(reason=FileNotFoundException)
 
-        self.domain = ["www.grasscity.eu"]
-        self.allowed_domains = ["http://grasscity.eu/"]
+        if self.json_config is not None:
+            self.start_urls = self.json_config['start_urls']
+
+            self.domain = self.json_config['domain']
+            self.allowed_domains = self.json_config['allowed_domains']
+        else:
+            raise CloseSpider(reason="Json file is not valid. Closing spider...")
 
     def parse(self, response):
-        images = response.css(self.list_rules['css']['images']).extract()
+
+        # Process each URL
+        urls = response.xpath(self.json_config['links']['detail']).extract()
+        for url in urls:
+            absolute_url = response.urljoin(url)
+            yield Request(absolute_url, cookies={'store_language':'en'}, callback=self.parse_site)
+
+        # Process next pages
+        next_page_url = response.xpath(self.json_config['links']['next_page']).extract()
+        next_page_url = next_page_url[1] if len(next_page_url) > 1 else next_page_url[0]
+        absolute_next_url = response.urljoin(next_page_url)
+        yield Request(absolute_next_url)
+
+    def parse_site(self, response):
+
+        # Name
+        name = self.get_complete_text(response.xpath(self.json_config['fields']['name']))
+
+        # price
+        price = self.get_complete_text(response.xpath(self.json_config['fields']['price']))
+
+        # Price Old
+        price_old = self.get_complete_text(response.xpath(self.json_config['fields']['price_old']))
+
+        # Availability
+        availability = self.get_complete_text(response.xpath(self.json_config['fields']['availability']))
+
+        # Description
+        description = self.get_complete_text(response.xpath(self.json_config['fields']['description']))
+
+        # Categories
+        categories = response.xpath(self.json_config['fields']['categories']).extract_first()
+
+        # Images
+        images = response.xpath(self.json_config['fields']['image']).extract()
         images = " , ".join(images)
         yield {
-            'name': response.xpath(self.list_rules['xpath']['product_name']).extract_first(),
-            'price': response.css(self.list_rules['css']['price']).extract_first(),
-            'sales_price': response.css(self.list_rules['css']['sales-price']).extract_first(),
+            'name': name,
+            'price': price,
+            'sales_price': price_old,
             'images': images,
-            'description': response.css(self.list_rules['css']['description']).extract_first(),
-            'categories': response.css(self.list_rules['css']['categories']).extract_first(),
-            'brand': response.css(self.list_rules['css']['brand']).extract_first(),
+            'availability': availability,
+            'description': description,
+            'categories': categories,
         }
 
+    def get_complete_text(self, html):
+        text_list = []
+        for element in html:
+            item = element.xpath('.//text()').extract()
+            text = " ".join(item)
+            text_list.append(text)
 
-
-
+        return ''.join(text_list).strip(' \t\n\r')
 
 
