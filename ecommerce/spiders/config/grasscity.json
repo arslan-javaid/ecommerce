@@ -7,6 +7,7 @@
         "price" : "//*[@class='add-to-cart-wrapper']//*[@class='special-price']//*[@class='price']",
         "price_old" : "//*[@class='add-to-cart-wrapper']//*[@class='old-price']//*[@class='price']",
         "availability" : "//*[@class='availability']",
+        "rating" : "//*[@class='rating-review']",
         "image" : "//*[@class='MagicToolboxSelectorsContainer']/*/a/@href",
         "categories" : "//*[@class='breadcrumbs']/*/li/a/@title",
         "description" : "//*[@class='block-description']/div[@class='block-content std']"

@@ -42,6 +42,9 @@ class GrasscitySpider(scrapy.Spider):
 
     def parse_site(self, response):
 
+        # URL
+        url = response.url
+
         # Name
         name = self.get_complete_text(response.xpath(self.json_config['fields']['name']))
 
@@ -57,6 +60,9 @@ class GrasscitySpider(scrapy.Spider):
         # Description
         description = self.get_complete_text(response.xpath(self.json_config['fields']['description']))
 
+        # Rating
+        rating = self.get_complete_text(response.xpath(self.json_config['fields']['rating']))
+
         # Categories
         categories = response.xpath(self.json_config['fields']['categories']).extract_first()
 
@@ -64,12 +70,14 @@ class GrasscitySpider(scrapy.Spider):
         images = response.xpath(self.json_config['fields']['image']).extract()
         images = " , ".join(images)
         yield {
+            'url': url,
             'name': name,
             'price': price,
             'sales_price': price_old,
             'images': images,
             'availability': availability,
             'description': description,
+            'rating': rating,
             'categories': categories,
         }
 

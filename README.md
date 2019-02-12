@@ -26,4 +26,5 @@ scrapy crawl grasscity -o grasscity.csv
 
 
 scrapy crawl grasscity -a config=config/grasscity.json -o output.json
+scrapy crawl grasscity -a config=config/well.json -o output.json
 ```
