@@ -1,6 +1,5 @@
 {
-    "domain" : ["www.farmaciaencasaonline.es"],
-    "allowed_domains" : ["farmaciaencasaonline.es"],
+
     "start_urls" : ["https://www.farmaciaencasaonline.es/bebe-mama/", "https://www.farmaciaencasaonline.es/corporal/", "https://www.farmaciaencasaonline.es/facial/", "https://www.farmaciaencasaonline.es/natural-y-bio/", "https://www.farmaciaencasaonline.es/fitoterapia/", "https://www.farmaciaencasaonline.es/nutricion-dieta/", "https://www.farmaciaencasaonline.es/optica/", "https://www.farmaciaencasaonline.es/ortopedia/", "https://www.farmaciaencasaonline.es/productos-sanitarios/", "https://www.farmaciaencasaonline.es/promociones/"],
     "fields" : {
         "name" : "//div[@class='product-view']//h1",
@@ -9,16 +8,19 @@
         "description" : "//div[@class='tabs-panels']//div[@class='std']//p",
         "sku" : "//div[@class='sku']//span[@class='value']/text()",
         "brand" : "//div[@class='brand-logo-container']//strong",
-        "categories" : "//div[@class='breadcrumbs']//li[contains(@class,'home')]//span/text()",
-        "rating" : "//test",
+        "category" : "//div[@class='breadcrumbs']//li[contains(@class,'home')]//span/text()",
+        "rating_count" : "",
         "price" : "//div[@class='product-type-data']//span[contains(@id,'product-price')]/span",
         "price_old" : "//div[@class='product-type-data']//span[contains(@id,'old-price')]/span",
         "availability" : "//div[@class='product-type-data']/p/span",
         "stock" : "//div[@class='product-type-data']/p/span",
-        "timestamp" : ""
+        "timestamp" : "",
+        "reference" : "",
+      "brand_text" : "",
+      "rating_average" : ""
     },
     "links" : {
-        "detail" :"//div[@class='category-products']//li[@class='item']/h2/a/@href",
-        "next_page" : "//div[@class='pages']//li[contains(@class,'next')]/a/@href"
+        "detail" :"//div[@class='category-products']//li[@class='item']",
+        "next_page" : "//div[@class='pages']//li[contains(@class,'next')]"
     }
 }

@@ -19,7 +19,7 @@
         }
     },
     "links" : {
-        "detail" :"//div[@class='boximg']/a/@href",
-        "next_page" : "//li[@class='page-item active ']//following-sibling::li[1]/a/@href"
+        "detail" :"//div[@class='boximg']/a",
+        "next_page" : "//li[@class='page-item active ']//following-sibling::li[1]/a"
     }
 }
