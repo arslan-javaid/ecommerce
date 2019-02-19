@@ -2,7 +2,7 @@
     "domain" : ["well.ca"],
     "allowed_domains" : ["well.ca"],
     "start_urls" : [
-        "https://well.ca/index.php?main_page=advanced_search_result&keyword=all&page=6&infinitescroll=true"
+        "https://well.ca/categories/new-in-baby-kids_4353.html"
     ],
     "fields" : {
         "name" : "//div[@id='gtm-main-product-page']//h1",
