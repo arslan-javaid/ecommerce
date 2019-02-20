@@ -9,9 +9,9 @@
         "availability" : "//*[@class='availability']",
         "ReviewCount":"//section[@id='productSheetCont']//span[@itemprop='reviewCount']",
         "rating_total" : "//section[@id='productSheetCont']//meta[@itemprop='bestRating']/@content",
-        "rating" : "//section[@id='productSheetCont']//meta[@itemprop='ratingValue']/@content",
+        "ratings" : "//section[@id='productSheetCont']//meta[@itemprop='ratingValue']/@content",
         "image" : "//a[@data-zoom-id='product-img']/@href",
-        "categories" : "//section[@id='productSheetCont']//li[@class='list-inline-item']/a/text()",
+        "category" : "//section[@id='productSheetCont']//li[@class='list-inline-item']/a/text()",
         "description" : "//div[@id='wrapper-description']//p",
          "Reviews": {
           "users": "//cite",
