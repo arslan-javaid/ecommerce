@@ -1,0 +1,24 @@
+{
+    "domain" : ["www.farmaciaterradez.com"],
+    "allowed_domains" : ["farmaciaterradez.com"],
+    "start_urls" : ["https://farmaciaterradez.com/99-medicamentos?n=120","https://farmaciaterradez.com/100-parafarmacia?n=120"],
+    "fields" : {
+        "name" : "//h1[@itemprop='name']",
+        "barcode" : "",
+        "image" : "//img[@id='bigpic']/@src",
+        "description" : "//section[@id='descriptionTab']//*",
+        "sku" : "//span[@itemprop='sku']//text()",
+        "brand" : "//a[@itemprop='brand']//text()",
+        "category" : "//a[@itemprop='url']//text()",
+        "ratings" : "",
+        "price" : "//span[@itemprop='price']",
+        "price_old" : "//span[@id='old_price_display']",
+        "availability" : "",
+        "stock" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//a[@class='product_img_link']",
+        "next_page" : "//div[@id='pagination']//li[@class='pagination_next']/a"
+    }
+}
