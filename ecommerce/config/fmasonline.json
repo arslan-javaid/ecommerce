@@ -1,0 +1,28 @@
+{
+    "domain" : ["www.fmasonline.com"],
+    "allowed_domains" : ["www.fmasonline.com"],
+    "start_urls" : ["https://www.fmasonline.com/bebe-y-madre/puericultura.html","https://www.fmasonline.com/cosmetica/maquillaje.html"],
+    "fields" : {
+        "name" : "//h1",
+        "barcode" : "",
+        "image" : "",
+        "description" : "//div[@class='long-description']",
+        "sku" : "",
+        "brand" : "",
+        "brand_text" : "",
+        "category" : "",
+        "ratings" : "",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "//div[@itemprop='price']",
+        "price_old" : "//div[contains(@class,'product-cart')]/div[1]/div[2]",
+        "availability" : "",
+        "stock" : "",
+        "reference" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" : "//div[@class='product-content row']/div/a/@href",
+        "next_page" : "//nav[@class='toolbar-custom row']/ul/li/a[contains(@class, 'next')]/@href"
+    }
+}
