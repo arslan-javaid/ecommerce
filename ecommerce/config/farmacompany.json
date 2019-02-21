@@ -9,8 +9,8 @@
         "description" : "//div[@id='products_description']//p",
         "sku" : "",
         "brand" : "",
-        "categories" : "//span[@class='smallText']//text()",
-        "rating" : "//div[@id='cuadro_voto']//meta[@itemprop='ratingValue']/@content",
+        "category" : "//span[@class='smallText']//text()",
+        "ratings" : "//div[@id='cuadro_voto']//meta[@itemprop='ratingValue']/@content",
         "price" : "//span[@class='productInfoWithoutSpecialPrice']",
         "price_old" : "//span[@class='productInfoSpecialOldPrice']",
         "availability" : "//*[@class='availability']",
@@ -18,7 +18,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" :"//div[@class='ProductBox']//a/@href",
-        "next_page" : "//span[@class='smallText']/a[11]/@href"
+        "detail" :"//div[@class='ProductBox']//a",
+        "next_page" : "//span[@class='smallText']/a"
     }
 }

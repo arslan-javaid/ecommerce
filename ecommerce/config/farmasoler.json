@@ -1,0 +1,24 @@
+{
+    "domain" : ["www.farmasoler.com"],
+    "allowed_domains" : ["farmasoler.com"],
+    "start_urls" : ["https://www.farmasoler.com/cosmetica.html", "https://www.farmasoler.com/bebe-y-mama.html", "https://www.farmasoler.com/nutricion.html", "https://www.farmasoler.com/salud-e-higiene.html", "https://www.farmasoler.com/medicamentos.html", "https://www.farmasoler.com/ofertas.html"],
+    "fields" : {
+        "name" : "//main[@id='maincontent']//h1[@itemprop='name']",
+        "barcode" : "",
+        "image" : "//main[@id='maincontent']//meta[@itemprop='image']/@content",
+        "description" : "//div[@itemprop='description']//*",
+        "sku" : "//main[@id='maincontent']//p[@itemprop='sku']//text()",
+        "brand" : "//main[@id='maincontent']//p[@itemprop='brand']//text()",
+        "category" : "//ul[@class='breadcrumb__list']//li[2]/a//text()",
+        "ratings" : "",
+        "price" : "//main[@id='maincontent']//span[@data-price-type='finalPrice']//*[@class='price']",
+        "price_old" : "//main[@id='maincontent']//span[@data-price-type='oldPrice']//*[@class='price']",
+        "availability" : "//main[@id='maincontent']//link[@itemprop='availability']/@href",
+        "stock" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//div[@class='product-card']/a[@class='img__link']",
+        "next_page" : "//li[contains(@class,'paginator__list__element')]//a"
+    }
+}

@@ -9,19 +9,15 @@
         "price" : "//div[@id='gtm-main-product-page']//span[@itemprop='price']",
         "price_old" : "//div[@id='gtm-main-product-page']//div[@class='oldPrice']",
         "availability" : "//test",
-        "rating" : "//div[@id='gtm-main-product-page']//meta[contains(@itemprop, 'ratingValue')]",
+        "ratings" : "//div[@id='gtm-main-product-page']//meta[contains(@itemprop, 'ratingValue')]",
         "image" : "//div[@id='gtm-main-product-page']//div[@class='product-image']/img/@src",
-        "categories" : "//div[@class='sprite-list sprite-list-tooltip']/img/@data-original-title",
+        "category" : "//div[@class='sprite-list sprite-list-tooltip']/img/@data-original-title",
         "description" : "//div[contains(@class, 'product-collateral')]//dd//*[@class='std']",
-        "ReviewCount":"//div[@id='gtm-main-product-page']//span[contains(@itemprop, 'reviewCount')]/text()",
-        "Brand":"//div[@id='gtm-main-product-page']//meta[contains(@itemprop, 'brand')]/@content",
-        "Reviews": {
-          "users": "//span[@class='product_text product_text_review']/text()",
-          "comments": "//div[contains(@itemprop, 'description')]/text() and //div[contains(@itemprop, 'description')]//*//text()"
-        }
+        "brand":"//div[@id='gtm-main-product-page']//meta[contains(@itemprop, 'brand')]/@content"
+
     },
     "links" : {
-        "detail" :"//*[@class='product_grid_link']/@href",
-        "next_page" : "//*[@id='next']/@href"
+        "detail" :"//*[@class='product_grid_link']",
+        "next_page" : "//*[@id='next']"
     }
 }

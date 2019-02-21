@@ -1,0 +1,24 @@
+{
+    "domain" : ["www.farmainstant.com"],
+    "allowed_domains" : ["farmainstant.com"],
+    "start_urls" : ["https://www.farmainstant.com/es/2-productos-de-farmacia-para-el-bebe/?n=90", "https://www.farmainstant.com/es/3-madres/?n=90", "https://www.farmainstant.com/es/4-adelgazar/?n=90", "https://www.farmainstant.com/es/5-higiene/?n=90", "https://www.farmainstant.com/es/6-cosmetica/?n=90", "https://www.farmainstant.com/es/8-producto-natural/?n=90", "https://www.farmainstant.com/es/10-vida-sexual/?n=90", "http://www.farmainstant.com/es/97-regalos-farmacia/?n=90", "https://www.farmainstant.com/es/146-medicamentos/?n=90"],
+    "fields" : {
+        "name" : "//div[@id='productName']//h1",
+        "barcode" : "",
+        "image" : "//div[@id='image-block']/img/@src",
+        "description" : "//div[@id='more_info_sheets']//*",
+        "sku" : "",
+        "brand" : "//span[@itemprop='brand']//text()",
+        "category" : "//div[@class='breadcrumb']//a[2]//text()",
+        "ratings" : "//meta[@itemprop='ratingValue']/@content",
+        "price" : "//span[@itemprop='price']",
+        "price_old" : "//span[@id='old_price_display']",
+        "availability" : "//p[@id='last_quantities']",
+        "stock" : "//p[@id='last_quantities']//text()",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//ul[@id='product_list']//li//a[@class='product_img_link']/@href",
+        "next_page" : "//li[@id='pagination_next']/a"
+    }
+}
