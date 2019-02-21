@@ -41,45 +41,44 @@ class GrasscitySpider(scrapy.Spider):
         yield Request(absolute_next_url)
 
     def parse_site(self, response):
-
+        data = {}
         # URL
-        url = response.url
+        data['url'] = response.url
 
         # Name
-        name = self.get_complete_text(response.xpath(self.json_config['fields']['name']))
+        if self.json_config['fields']['name'] is not '':
+            data['name'] = self.get_complete_text(response.xpath(self.json_config['fields']['name']))
 
         # price
-        price = self.get_complete_text(response.xpath(self.json_config['fields']['price']))
+        if self.json_config['fields']['price'] is not '':
+            data['price'] = self.get_complete_text(response.xpath(self.json_config['fields']['price']))
 
         # Price Old
-        price_old = self.get_complete_text(response.xpath(self.json_config['fields']['price_old']))
+        if self.json_config['fields']['price_old'] is not '':
+            data['price_old'] = self.get_complete_text(response.xpath(self.json_config['fields']['price_old']))
 
         # Availability
-        availability = self.get_complete_text(response.xpath(self.json_config['fields']['availability']))
+        if self.json_config['fields']['availability'] is not '':
+            data['availability'] = self.get_complete_text(response.xpath(self.json_config['fields']['availability']))
 
         # Description
-        description = self.get_complete_text(response.xpath(self.json_config['fields']['description']))
+        if self.json_config['fields']['description'] is not '':
+         data['description'] = self.get_complete_text(response.xpath(self.json_config['fields']['description']))
 
         # Rating
-        ratings = self.get_complete_text(response.xpath(self.json_config['fields']['ratings']))
+        if self.json_config['fields']['ratings'] is not '':
+            data['ratings'] = self.get_complete_text(response.xpath(self.json_config['fields']['ratings']))
 
         # Categories
-        category = response.xpath(self.json_config['fields']['category']).extract_first()
+        if self.json_config['fields']['category'] is not '':
+            data['category'] = response.xpath(self.json_config['fields']['category']).extract_first()
 
         # Images
-        images = response.xpath(self.json_config['fields']['image']).extract()
-        images = " , ".join(images)
-        yield {
-            'url': url,
-            'name': name,
-            'price': price,
-            'sales_price': price_old,
-            'images': images,
-            'availability': availability,
-            'description': description,
-            'ratings': ratings,
-            'category': category,
-        }
+        if self.json_config['fields']['image'] is not '':
+            images = response.xpath(self.json_config['fields']['image']).extract()
+            data['images'] = " , ".join(images)
+
+        yield data
 
     def get_complete_text(self, html):
         text_list = []
