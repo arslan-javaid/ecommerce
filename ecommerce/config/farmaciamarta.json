@@ -1,0 +1,28 @@
+{
+    "domain" : ["www.farmaciamarta.cat"],
+    "allowed_domains" : ["farmaciamarta.cat"],
+    "start_urls" : ["https://www.farmaciamarta.cat/fitoterapia-i-dietetica", "https://www.farmaciamarta.cat/higiene-personal", "https://www.farmaciamarta.cat/dermocosmetica", "https://www.farmaciamarta.cat/raco-senior", "https://www.farmaciamarta.cat/farmaciola-primeres-cures", "https://www.farmaciamarta.cat/infantil", "https://www.farmaciamarta.cat/Medicaments"],
+    "fields" : {
+        "name" : "//h1[@itemprop='name']",
+        "barcode" : "",
+        "image" : "//img[@id='bigpic']/@src",
+        "description" : "//div[@itemprop='description']//*",
+        "sku" : "//span[contains(@itemprop,'sku')]",
+        "brand" : "",
+        "brand_text" : "",
+        "category" : "//span[contains(@itemprop,'title')]",
+        "ratings" : "",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "//span[@id='our_price_display']",
+        "price_old" : "//span[@id='old_price_display']/span",
+        "availability" : "",
+        "stock" : "",
+        "reference" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//a[contains(@class,'product_img_link')]",
+        "next_page" : "//*[@class='pagination_next']/a)[1]"
+    }
+}

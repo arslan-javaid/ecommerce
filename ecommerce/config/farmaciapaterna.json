@@ -1,0 +1,27 @@
+{
+
+    "start_urls" : ["https://www.farmaciapaterna.es/595-higiene-facial", "https://www.farmaciapaterna.es/597-antiaging", "https://www.farmaciapaterna.es/600-aguas-micelares", "https://www.farmaciapaterna.es/601-piel-sensible", "https://www.farmaciapaterna.es/611-contorno-ojos", "https://www.farmaciapaterna.es/614-antimanchas", "https://www.farmaciapaterna.es/622-piel-acneica", "https://www.farmaciapaterna.es/627-serums", "https://www.farmaciapaterna.es/633-cosmetica-masculina", "https://www.farmaciapaterna.es/634-nutricosmetica", "https://www.farmaciapaterna.es/577-adelgazantes", "https://www.farmaciapaterna.es/604-sustitutivos-de-comidas", "https://www.farmaciapaterna.es/609-probioticos", "https://www.farmaciapaterna.es/612-vitaminas-y-complementos-alimenticios", "https://www.farmaciapaterna.es/592-herboristeria", "https://www.farmaciapaterna.es/610-productos-sanitarios", "https://www.farmaciapaterna.es/613-caramelos-y-bucofaringeos", "https://www.farmaciapaterna.es/594-chupetes-y-cadenas", "https://www.farmaciapaterna.es/590-tetinas", "https://www.farmaciapaterna.es/617-biberones", "https://www.farmaciapaterna.es/626-accesorios-infantiles", "https://www.farmaciapaterna.es/603-colutorios", "https://www.farmaciapaterna.es/581-pastas-dentales", "https://www.farmaciapaterna.es/591-cepillos-dentales", "https://www.farmaciapaterna.es/596-protesis-dentales", "https://www.farmaciapaterna.es/584-higiene-intima", "https://www.farmaciapaterna.es/620-crema-corporal", "https://www.farmaciapaterna.es/624-gel-de-bano", "https://www.farmaciapaterna.es/625-piel-atopica", "https://www.farmaciapaterna.es/628-desodorantes", "https://www.farmaciapaterna.es/606-tratamiento-capilar", "https://www.farmaciapaterna.es/629-nutricosmetica-capilar", "https://www.farmaciapaterna.es/588-facial", "https://www.farmaciapaterna.es/589-corporal", "https://www.farmaciapaterna.es/623-con-color", "https://www.farmaciapaterna.es/631-after-sun", "https://www.farmaciapaterna.es/607-lubricantes", "https://www.farmaciapaterna.es/630-preservativos", "https://www.farmaciapaterna.es/621-incontinencia", "https://www.farmaciapaterna.es/615-cuidado-del-pie", "https://www.farmaciapaterna.es/636-tensiometros", "https://www.farmaciapaterna.es/598-botiquin", "https://www.farmaciapaterna.es/599-piojos", "https://www.farmaciapaterna.es/632-mosquitos"],
+    "fields" : {
+        "name" : "//h1",
+        "barcode" : "",
+        "image" : "//img[@id='bigpic']/@src",
+        "description" : "//div[@id='short_description_content']//*",
+        "sku" : "//span[contains(@itemprop,'sku')]//text()",
+        "brand" : "",
+        "brand_text" : "",
+        "category" : "(//span[contains(@itemprop,'title')])[1]//text()",
+        "ratings" : "",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "//span[@id='our_price_display']",
+        "price_old" : "//span[@id='old_price_display']/span",
+        "availability" : "",
+        "stock" : "",
+        "reference" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//a[contains(@class,'product_img_link')]",
+        "next_page" : "//li[@id='pagination_next_bottom']/a"
+    }
+}
