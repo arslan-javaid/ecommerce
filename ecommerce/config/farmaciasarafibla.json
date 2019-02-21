@@ -1,0 +1,24 @@
+{
+    "domain" : ["www.farmaciasarafibla.com"],
+    "allowed_domains" : ["farmaciasarafibla.com"],
+    "start_urls" : ["http://www.farmaciasarafibla.com/Higiene-dental-s6.html","http://www.farmaciasarafibla.com/Nutricion-c2.html","http://www.farmaciasarafibla.com/Belleza-c3.html"],
+    "fields" : {
+        "name" : "//h1",
+        "barcode" : "",
+        "image" : "//div[@class='foto-producto']/img/@src",
+        "description" : "//div[@id='descripcion_producto']//*",
+        "sku" : "",
+        "brand" : "",
+        "category" : "",
+        "ratings" : "",
+        "price" : "//div[@class='precio']/span",
+        "price_old" : "",
+        "availability" : "",
+        "stock" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//div[@class='foto']//a/@href",
+        "next_page" : ""
+    }
+}

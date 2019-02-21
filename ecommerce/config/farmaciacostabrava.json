@@ -8,7 +8,7 @@
         "sku" : "//table[@id='caracteristicas']//tr[1]//td[2]//text()",
         "brand" : "//table[@id='caracteristicas']//tr[2]//td[2]",
         "category" : "//table[@id='caracteristicas']//tr[4]//td[2]//text()",
-        "rating" : "",
+        "ratings" : "",
         "price" : "//td[@data-th='Precio']",
         "price_old" : "",
         "availability" : "",
