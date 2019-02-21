@@ -1,0 +1,24 @@
+{
+    "domain" : ["www.farmacias1000.com"],
+    "allowed_domains" : ["farmacias1000.com"],
+    "start_urls" : ["https://www.farmacias1000.com/parafarmacia/","https://www.farmacias1000.com/ortopedia/"],
+    "fields" : {
+        "name" : "//h1[@itemprop='name']",
+        "barcode" : "",
+        "image" : "//img[@id='bigpic']/@src",
+        "description" : "//div[@id='idTab1']//*",
+        "sku" : "//div[@id='pb-left-column']//meta[@itemprop='sku']/@content",
+        "brand" : "//div[@id='manufacturer_info']//a[@itemprop='brand']",
+        "category" : "//span[@property='name']//text()",
+        "ratings" : "//div[@id='pb-left-column']//meta[@itemprop='ratingValue']/@content",
+        "price" : "//div[@id='pb-left-column']//span[@itemprop='price']",
+        "price_old" : "//span[@id='old_price_display']",
+        "availability" : "//div[@id='pb-left-column']//link[@itemprop='availability']/@href",
+        "stock" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//a[contains(@class,'product_img_link')]/@href",
+        "next_page" : "//li[@id='pagination_next_bottom']/a/@href"
+    }
+}
