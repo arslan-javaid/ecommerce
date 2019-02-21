@@ -4,13 +4,22 @@
     "start_urls" : ["https://www.grasscity.eu/bongs/glass-bongs"],
     "fields" : {
         "name" : "//*[@class='product-shop']//*[@class='product-name']/span",
+        "barcode" : "",
+        "image" : "//*[@class='MagicToolboxSelectorsContainer']/*/a/@href",
+        "description" : "//*[@class='block-description']/div[@class='block-content std']",
+        "sku" : "",
+        "brand" : "",
+        "brand_text" : "",
+        "category" : "//*[@class='breadcrumbs']/*/li/a/@title",
+        "ratings" : "//*[@class='rating-review']",
+        "rating_average" : "",
+        "rating_count" : "",
         "price" : "//*[@class='add-to-cart-wrapper']//*[@class='special-price']//*[@class='price']",
         "price_old" : "//*[@class='add-to-cart-wrapper']//*[@class='old-price']//*[@class='price']",
         "availability" : "//*[@class='availability']",
-        "rating" : "//*[@class='rating-review']",
-        "image" : "//*[@class='MagicToolboxSelectorsContainer']/*/a/@href",
-        "categories" : "//*[@class='breadcrumbs']/*/li/a/@title",
-        "description" : "//*[@class='block-description']/div[@class='block-content std']"
+        "stock" : "",
+        "reference" : "",
+        "timestamp" : ""
     },
     "links" : {
         "detail" :"//*[@class='product-name']/@href",

@@ -61,10 +61,10 @@ class GrasscitySpider(scrapy.Spider):
         description = self.get_complete_text(response.xpath(self.json_config['fields']['description']))
 
         # Rating
-        rating = self.get_complete_text(response.xpath(self.json_config['fields']['rating']))
+        rating = self.get_complete_text(response.xpath(self.json_config['fields']['ratings']))
 
         # Categories
-        categories = response.xpath(self.json_config['fields']['categories']).extract_first()
+        categories = response.xpath(self.json_config['fields']['category']).extract_first()
 
         # Images
         images = response.xpath(self.json_config['fields']['image']).extract()
