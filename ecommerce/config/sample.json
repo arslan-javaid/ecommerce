@@ -1,0 +1,28 @@
+{
+    "domain" : [""],
+    "allowed_domains" : [""],
+    "start_urls" : [""],
+    "fields" : {
+        "name" : "",
+        "barcode" : "",
+        "image" : "",
+        "description" : "",
+        "sku" : "",
+        "brand" : "",
+        "brand_text" : "",
+        "category" : "",
+        "ratings" : "",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "",
+        "price_old" : "",
+        "availability" : "",
+        "stock" : "",
+        "reference" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"",
+        "next_page" : ""
+    }
+}
