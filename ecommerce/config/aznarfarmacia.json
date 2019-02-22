@@ -1,0 +1,28 @@
+{
+    "domain" : ["aznarfarmacia.com"],
+    "allowed_domains" : ["aznarfarmacia.com"],
+    "start_urls" : ["http://aznarfarmacia.com/categoria-producto/parafarmacia/vitaminas-y-complementos/vitaminas-y-defensas/", "http://aznarfarmacia.com/categoria-producto/parafarmacia/vitaminas-y-complementos/"],
+    "fields" : {
+        "name" : "//h1[contains(@class,'product_title')]",
+        "barcode" : "",
+        "image" : "//*[contains(@class,'woocommerce-product-gallery')]/div/@data-thumb",
+        "description" : "//*[@itemprop='description']/@content",
+        "sku" : "//span[@class='sku']",
+        "brand" : "",
+        "brand_text" : "",
+        "category" : "//*[@class='woocommerce-breadcrumb']/a/@href",
+        "ratings" : "",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "//*[@class='summary entry-summary']/p/span",
+        "price_old" : "",
+        "availability" : "",
+        "stock" : "",
+        "reference" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//*[contains(@class,'products')]/li/a/@href",
+        "next_page" : "//*[@class='page-numbers']/li/a[contains(@class,'next')]/@href"
+    }
+}
