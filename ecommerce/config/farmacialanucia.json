@@ -106,8 +106,8 @@
         "brand" : "//p[@class='product-brand']//text()",
         "category" : "//li[contains(@class,'category')]/a//text()",
         "ratings" : "",
-        "price" : "//span[contains(@id,'product-price')]",
-        "price_old" : "//span[contains(@id,'old-price')]",
+        "price" : "//span[contains(@id,'product-price')]//text()",
+        "price_old" : "//span[contains(@id,'old-price')]//text()",
         "availability" : "",
         "stock" : "//span[@class='value']//text()",
         "timestamp" : ""
