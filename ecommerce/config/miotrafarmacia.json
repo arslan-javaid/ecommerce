@@ -1,0 +1,28 @@
+{
+    "domain" : ["www.miotrafarmacia.com"],
+    "allowed_domains" : ["www.miotrafarmacia.com"],
+    "start_urls" : ["https://www.miotrafarmacia.com/es/comprar/bebe"],
+    "fields" : {
+        "name" : "//h1[@itemprop='name']",
+        "barcode" : "",
+        "image" : "//*[contains(@class,'thumb-image')]/@href",
+        "description" : "//div[@itemprop='description']/p",
+        "sku" : "",
+        "brand" : "//*[@class='manufacturer_link']/a/img/@title",
+        "brand_text" : "",
+        "category" : "//*[contains(@class,'breadcrumbs')]/li/a",
+        "ratings" : "",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "//*[@class='our-price']",
+        "price_old" : "//*[@class='market-price']/p[@class='line-through']",
+        "availability" : "",
+        "stock" : "",
+        "reference" : "//*[@itemprop='mpn']",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//*[@itemprop='url']/@href",
+        "next_page" : "//li[contains(@class,'next')]/a/@href"
+    }
+}
