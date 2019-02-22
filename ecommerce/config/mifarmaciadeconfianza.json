@@ -1,0 +1,28 @@
+{
+    "domain" : ["www.mifarmaciadeconfianza.es"],
+    "allowed_domains" : ["www.mifarmaciadeconfianza.es"],
+    "start_urls" : ["https://www.mifarmaciadeconfianza.es/potitos"],
+    "fields" : {
+        "name" : "//h1[@itemprop='name']",
+        "barcode" : "",
+        "image" : "//*[@id='bigpic']/@src",
+        "description" : "//*[@id='more_info_sheets']/div/p",
+        "sku" : "",
+        "brand" : "",
+        "brand_text" : "",
+        "category" : "//*[@class='breadcrumb']/span/a",
+        "ratings" : "//div[@class='display-review']/span",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "//span[@id='our_price_display']",
+        "price_old" : "//span[@id='old_price_display']",
+        "availability" : "",
+        "stock" : "",
+        "reference" : "//*[@id='product_reference']/span",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//div[@class='product_img_container']/a/@href",
+        "next_page" : "//li[@id='pagination_next']/a/@href"
+    }
+}
