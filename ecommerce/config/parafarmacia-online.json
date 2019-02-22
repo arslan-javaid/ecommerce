@@ -1,0 +1,28 @@
+{
+    "domain" : ["www.parafarmacia-online.com"],
+    "allowed_domains" : ["www.parafarmacia-online.com"],
+    "start_urls" : ["https://www.parafarmacia-online.com/cuidado-y-belleza/top-marcas-cosmetica/comprar-cosmeticos-y-cremas-caudalie-barato-oferta-online"],
+    "fields" : {
+        "name" : "//h1[@itemprop='name']",
+        "barcode" : "",
+        "image" : "//*[@itemprop='image']/@src",
+        "description" : "//div[@itemprop='description']/p",
+        "sku" : "//span[@itemprop='sku']",
+        "brand" : "//*[@itemprop='brand']/meta/@content",
+        "brand_text" : "",
+        "category" : "//*[@itemprop='breadcrumb']/li/a",
+        "ratings" : "",
+        "rating_average" : "",
+        "rating_count" : "",
+        "price" : "//span[@id='our_price_display']",
+        "price_old" : "",
+        "availability" : "//span[@id='quantityAvailable']",
+        "stock" : "",
+        "reference" : "",
+        "timestamp" : ""
+    },
+    "links" : {
+        "detail" :"//*[@class='product_img_link']/@href",
+        "next_page" : "//*[@class='pagination_next']/a/@href"
+    }
+}
