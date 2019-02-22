@@ -63,7 +63,7 @@
         "category" : "///li[contains(@class,'breadcrumb-item')][2]/a/text()",
         "ratings" : "",
         "price" : "//div[contains(@itemprop,'price')]/text()",
-        "price_old" : "//div[@class='row']/div[@class='col-4'][1]",
+        "price_old" : "//div[@class='row']/div[@class='col-4'][position() > 1][position() < last()]//text()",
         "availability" : "",
         "stock" : "",
         "timestamp" : ""
