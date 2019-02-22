@@ -1,18 +1,18 @@
 {
     "start_urls" : ["https://www.farmaciacostabrava.com/bebes-y-recien-nacidos/", "https://www.farmaciacostabrava.com/infantil/", "https://www.farmaciacostabrava.com/higiene-y-bano/", "https://www.farmaciacostabrava.com/problemas-de-salud-adultos/", "https://www.farmaciacostabrava.com/dietetica-y-nutricion/", "https://www.farmaciacostabrava.com/cosmetica/", "https://www.farmaciacostabrava.com/aparatos-electronicos-y-test/", "https://www.farmaciacostabrava.com/salud-dental/", "https://www.farmaciacostabrava.com/optica/", "https://www.farmaciacostabrava.com/ortopedia/", "https://www.farmaciacostabrava.com/salud-sexual/", "https://www.farmaciacostabrava.com/fitoterapia/", "https://www.farmaciacostabrava.com/vitaminas-14/", "https://www.farmaciacostabrava.com/botiquin/", "https://www.farmaciacostabrava.com/otros-1050/"],
     "fields" : {
-        "name" : "//h1",
+        "name" : "//h1//text()",
         "barcode" : "",
         "image" : "//div[contains(@class,'picture position_picture')]/img/@src",
-        "description" : "//div[contains(@class,'info')]",
+        "description" : "//div[contains(@class,'info')]//text()",
         "sku" : "//table[@id='caracteristicas']//tr[1]//td[2]//text()",
-        "brand" : "//table[@id='caracteristicas']//tr[2]//td[2]",
-        "category" : "//table[@id='caracteristicas']//tr[4]//td[2]//text()",
+        "brand" : "//table[@id='caracteristicas']//tr[2]//td[2]//text()",
+        "category" : "//*[@id='fil_ariadna']//a//text()",
         "ratings" : "",
-        "price" : "//td[@data-th='Precio']",
+        "price" : "//td[@data-th='Precio']//text()",
         "price_old" : "",
         "availability" : "",
-        "stock" : "//table[@id='caracteristicas']//tr[3]//td[2]",
+        "stock" : "//table[@id='caracteristicas']//tr[3]//td[2]//text()",
         "timestamp" : ""
     },
     "links" : {

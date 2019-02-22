@@ -3,7 +3,7 @@
     "allowed_domains" : ["aznarfarmacia.com"],
     "start_urls" : ["http://aznarfarmacia.com/categoria-producto/parafarmacia/vitaminas-y-complementos/vitaminas-y-defensas/", "http://aznarfarmacia.com/categoria-producto/parafarmacia/vitaminas-y-complementos/"],
     "fields" : {
-        "name" : "//h1[contains(@class,'product_title')]",
+        "name" : "//h1[contains(@class,'product_title')]//text()",
         "barcode" : "",
         "image" : "//*[contains(@class,'woocommerce-product-gallery')]/div/@data-thumb",
         "description" : "//*[@itemprop='description']/@content",

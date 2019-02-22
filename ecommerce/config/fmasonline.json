@@ -3,7 +3,7 @@
     "allowed_domains" : ["www.fmasonline.com"],
     "start_urls" : ["https://www.fmasonline.com/bebe-y-madre/puericultura.html","https://www.fmasonline.com/cosmetica/maquillaje.html"],
     "fields" : {
-        "name" : "//h1",
+        "name" : "//h1//text()",
         "barcode" : "",
         "image" : "",
         "description" : "//div[@class='long-description']",

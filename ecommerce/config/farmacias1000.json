@@ -3,7 +3,7 @@
     "allowed_domains" : ["farmacias1000.com"],
     "start_urls" : ["https://www.farmacias1000.com/parafarmacia/","https://www.farmacias1000.com/ortopedia/"],
     "fields" : {
-        "name" : "//h1[@itemprop='name']",
+        "name" : "//h1[@itemprop='name']//text()",
         "barcode" : "",
         "image" : "//img[@id='bigpic']/@src",
         "description" : "//div[@id='idTab1']//*",

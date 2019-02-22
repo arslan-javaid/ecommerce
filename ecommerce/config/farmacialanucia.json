@@ -98,7 +98,7 @@
 "https://www.farmacialanucia.es/vitaminas-c-125-133.html",
 "https://www.farmacialanucia.es/packs-c-125-134.html"],
     "fields" : {
-        "name" : "//span[@class='h1']",
+        "name" : "//span[@class='h1']//text()",
         "barcode" : "",
         "image" : "//img[@id='image-main']/@src",
         "description" : "//div[@class='tab-content']/div[@class='std' and 1]//*//text()",

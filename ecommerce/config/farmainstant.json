@@ -3,7 +3,7 @@
     "allowed_domains" : ["farmainstant.com"],
     "start_urls" : ["https://www.farmainstant.com/es/2-productos-de-farmacia-para-el-bebe/?n=90", "https://www.farmainstant.com/es/3-madres/?n=90", "https://www.farmainstant.com/es/4-adelgazar/?n=90", "https://www.farmainstant.com/es/5-higiene/?n=90", "https://www.farmainstant.com/es/6-cosmetica/?n=90", "https://www.farmainstant.com/es/8-producto-natural/?n=90", "https://www.farmainstant.com/es/10-vida-sexual/?n=90", "http://www.farmainstant.com/es/97-regalos-farmacia/?n=90", "https://www.farmainstant.com/es/146-medicamentos/?n=90"],
     "fields" : {
-        "name" : "//div[@id='productName']//h1",
+        "name" : "//div[@id='productName']//h1//text()",
         "barcode" : "",
         "image" : "//div[@id='image-block']/img/@src",
         "description" : "//div[@id='more_info_sheets']//*",
