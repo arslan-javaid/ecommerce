@@ -5,14 +5,14 @@
         "https://well.ca/categories/new-in-baby-kids_4353.html"
     ],
     "fields" : {
-        "name" : "//div[@id='gtm-main-product-page']//h1",
-        "price" : "//div[@id='gtm-main-product-page']//span[@itemprop='price']",
-        "price_old" : "//div[@id='gtm-main-product-page']//div[@class='oldPrice']",
+        "name" : "//div[@id='gtm-main-product-page']//h1/text()",
+        "price" : "//div[@id='gtm-main-product-page']//span[@itemprop='price']//text()",
+        "price_old" : "//div[@id='gtm-main-product-page']//div[@class='oldPrice']//text()",
         "availability" : "//test",
         "ratings" : "//div[@id='gtm-main-product-page']//meta[contains(@itemprop, 'ratingValue')]",
         "image" : "//div[@id='gtm-main-product-page']//div[@class='product-image']/img/@src",
-        "category" : "//div[@class='sprite-list sprite-list-tooltip']/img/@data-original-title",
-        "description" : "//div[contains(@class, 'product-collateral')]//dd//*[@class='std']",
+        "category" : "//div[@class='sprite-list sprite-list-tooltip']/img/@data-original-title//text()",
+        "description" : "//div[contains(@class, 'product-collateral')]//dd//*[@class='std']//text()",
         "brand":"//div[@id='gtm-main-product-page']//meta[contains(@itemprop, 'brand')]/@content"
 
     },

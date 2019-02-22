@@ -11,7 +11,7 @@
         "brand" : "",
         "brand_text" : "",
         "category" : "//*[@class='breadcrumbs']/*/li/a/@title",
-        "ratings" : "//*[@class='rating-review']",
+        "ratings" : "count(//div[@class='product-shop']//span[contains(@class,'yotpo-icon-star')])",
         "rating_average" : "",
         "rating_count" : "",
         "price" : "//*[@class='add-to-cart-wrapper']//*[@class='special-price']//*[@class='price']",

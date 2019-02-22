@@ -3,7 +3,7 @@
     "allowed_domains" : ["farmaciaglorieta.com"],
     "start_urls" : ["https://www.farmaciaglorieta.com/240-medicamentos-sin-receta-online", "https://www.farmaciaglorieta.com/241-gripe-y-resfriado", "https://www.farmaciaglorieta.com/253-antigripales", "https://www.farmaciaglorieta.com/258-via-oral", "https://www.farmaciaglorieta.com/260-antidiarreicos", "https://www.farmaciaglorieta.com/264-desinfectantes-y-apositos", "https://www.farmaciaglorieta.com/274-irritaciones", "https://www.farmaciaglorieta.com/276-antisepticos", "https://www.farmaciaglorieta.com/215-trastornos-animicos-del-sueno", "https://www.farmaciaglorieta.com/203-aftersun", "https://www.farmaciaglorieta.com/144-antiarrugas", "https://www.farmaciaglorieta.com/155-cuperosis-rosacea", "https://www.farmaciaglorieta.com/115-anticeluliticos", "https://www.farmaciaglorieta.com/140-control-de-peso", "https://www.farmaciaglorieta.com/167-alimentacion", "https://www.farmaciaglorieta.com/102-alisante", "https://www.farmaciaglorieta.com/128-anticaida-oral", "https://www.farmaciaglorieta.com/182-antiarrugas", "https://www.farmaciaglorieta.com/177-herpes", "https://www.farmaciaglorieta.com/179-hidratantes", "https://www.farmaciaglorieta.com/198-descanso", "https://www.farmaciaglorieta.com/160-afeitado", "https://www.farmaciaglorieta.com/132-adhesivos-dentales", "https://www.farmaciaglorieta.com/101-apositos", "https://www.farmaciaglorieta.com/187-antiescaras", "https://www.farmaciaglorieta.com/193-antirronquidos"],
     "fields" : {
-        "name" : "//h1[@itemprop='name']",
+        "name" : "//h1[@itemprop='name']//text()",
         "barcode" : "",
         "image" : "//img[@id='bigpic']/@src",
         "description" : "//div[@itemprop='description']",

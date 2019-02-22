@@ -3,7 +3,7 @@
     "allowed_domains" : ["farmaciaribera.es"],
     "start_urls" : ["https://farmaciaribera.es/medicina-natural/", "https://farmaciaribera.es/parafarmacia/", "https://farmaciaribera.es/cosmetica/", "https://farmaciaribera.es/medicamentos/"],
     "fields" : {
-        "name" : "//div[@class='product-name']/h1",
+        "name" : "//div[@class='product-name']/h1//text()",
         "barcode" : "",
         "image" : "//div[@class='product-image-gallery']/img/@src",
         "description" : "//div[contains(@class,'product-informacion')]//*",
@@ -11,14 +11,14 @@
         "brand" : "//p[@class='product-brand']//text()",
         "category" : "",
         "ratings" : "",
-        "price" : "//div[@class='price-info']//span[@class='price']",
-        "price_old" : "//span[@id='old_price_display']",
+        "price" : "//div[@class='price-info']//span[@class='price']//text()",
+        "price_old" : "//span[@id='old_price_display']//text()",
         "availability" : "//div[@id='txt_stock1']//text()",
         "stock" : "//div[@id='txt_stock1']//text()",
         "timestamp" : ""
     },
     "links" : {
         "detail" :"//li[contains(@class,'item')]/a[@class='product-image']",
-        "next_page" : "//div[@class='pages']/ol/li"
+        "next_page" : "//div[@class='pages']/ol/li[@class='current']/following-sibling::li[1]"
     }
 }

@@ -3,7 +3,7 @@
     "allowed_domains" : ["farmasoler.com"],
     "start_urls" : ["https://www.farmasoler.com/cosmetica.html", "https://www.farmasoler.com/bebe-y-mama.html", "https://www.farmasoler.com/nutricion.html", "https://www.farmasoler.com/salud-e-higiene.html", "https://www.farmasoler.com/medicamentos.html", "https://www.farmasoler.com/ofertas.html"],
     "fields" : {
-        "name" : "//main[@id='maincontent']//h1[@itemprop='name']",
+        "name" : "//main[@id='maincontent']//h1[@itemprop='name']//text()",
         "barcode" : "",
         "image" : "//main[@id='maincontent']//meta[@itemprop='image']/@content",
         "description" : "//div[@itemprop='description']//*",

@@ -3,7 +3,7 @@
     "allowed_domains" : ["farmaciaanallusar.es"],
     "start_urls" : ["https://farmaciaanallusar.es/cosmetica", "https://farmaciaanallusar.es/nutricion-dietetica", "https://farmaciaanallusar.es/higiene-proteccion", "https://farmaciaanallusar.es/ninos-y-bebes", "https://farmaciaanallusar.es/enerzona-omega-3", "https://farmaciaanallusar.es/caida-cabello", "https://farmaciaanallusar.es/efp-medicamentos", "https://farmaciaanallusar.es/colesterol"],
     "fields" : {
-        "name" : "//div[@class='product-name']/h1",
+        "name" : "//div[@class='product-name']/h1//text()",
         "barcode" : "",
         "image" : "//img[@id='image']/@src",
         "description" : "//div[@id='product_tabs_description_contents']//*",

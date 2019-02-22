@@ -3,7 +3,7 @@
     "allowed_domains" : ["www.farmaciajaimecarbonell.com"],
     "start_urls" : ["https://www.farmaciajaimecarbonell.com/es/841-cremas-hidratantes","https://www.farmaciajaimecarbonell.com/es/856-piel-atopica"],
     "fields" : {
-        "name" : "//h1",
+        "name" : "//h1//text()",
         "barcode" : "",
         "image" : "//ul[@id='thumbs_list_frame']/li/a/@href",
         "description" : "//div[@id='short_description_content']",
