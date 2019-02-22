@@ -4,6 +4,7 @@ from scrapy.exceptions import CloseSpider
 from scrapy.http import Request
 import json
 import pkgutil
+import re
 
 
 class GrasscitySpider(scrapy.Spider):
@@ -83,10 +84,28 @@ class GrasscitySpider(scrapy.Spider):
     def get_complete_text(self, html):
         text_list = []
         for element in html:
-            item = element.xpath('.//text()').extract()
-            text = " ".join(item)
+            item = element.extract()
+            text = "".join(item)
             text_list.append(text)
 
-        return ''.join(text_list).strip(' \t\n\r')
+        text = ''.join(text_list).strip(' \t\n\r')
+        text = self.remove_quotations(text)
+        text = self.replace_newline_char(text)
+        text = self.strip_field(text)
+
+        return text
+
+    def remove_quotations(self, field):
+        return field.replace(u"\u201d", "").replace(u"\u201c", "")
+
+    def replace_newline_char(self, field):
+        return field.replace(u"\n", " ").replace(u"\r", " ")
+
+    def strip_field(self, field):
+        return field.strip()
+
+    def extract_digits(self, field):
+        reference_regex = re.compile("\\d+")
+        return reference_regex.findall(field)
 
 
