@@ -3,8 +3,8 @@
     "allowed_domains" : ["promofarma.com"],
     "start_urls" : ["https://www.promofarma.com/en/beauty-and-skincare/c-1"],
     "fields" : {
-        "name" : "//h1[@itemprop='name']",
-        "price" : "//div[contains(@class, 'price-container')]//span[@id='price']",
+        "name" : "//h1[@itemprop='name']//text()",
+        "price" : "//div[contains(@class, 'price-container')]//span[@id='price']//text()",
         "price_old" : "//*[@class='add-to-cart-wrapper']//*[@class='old-price']//*[@class='price']",
         "availability" : "//*[@class='availability']",
         "ReviewCount":"//section[@id='productSheetCont']//span[@itemprop='reviewCount']",
@@ -12,10 +12,10 @@
         "ratings" : "//section[@id='productSheetCont']//meta[@itemprop='ratingValue']/@content",
         "image" : "//a[@data-zoom-id='product-img']/@href",
         "category" : "//section[@id='productSheetCont']//li[@class='list-inline-item']/a/text()",
-        "description" : "//div[@id='wrapper-description']//p",
+        "description" : "//div[@id='wrapper-description']//p//text()",
          "Reviews": {
-          "users": "//cite",
-          "comments": "//em"
+          "users": "//cite//text()",
+          "comments": "//em//text()"
         }
     },
     "links" : {
