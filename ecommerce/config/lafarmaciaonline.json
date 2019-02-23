@@ -18,7 +18,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" :"//figure[contains(@class,'imgListadoProducto')]/a/@href",
-        "next_page" : "//nav[2]/ul[@class='pagination']/li[last()]//a/@href"
+        "detail" :"//figure[contains(@class,'imgListadoProducto')]/a",
+        "next_page" : "//nav[2]/ul[@class='pagination']/li[last()]//a"
     }
 }

@@ -22,7 +22,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" : "//div[@class='product-content row']/div/a/@href",
-        "next_page" : "//nav[@class='toolbar-custom row']/ul/li/a[contains(@class, 'next')]/@href"
+        "detail" : "//div[@class='product-content row']/div/a",
+        "next_page" : "//nav[@class='toolbar-custom row']/ul/li/a[contains(@class, 'next')]"
     }
 }

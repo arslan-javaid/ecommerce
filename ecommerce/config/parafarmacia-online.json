@@ -22,7 +22,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" :"//*[@class='product_img_link']/@href",
-        "next_page" : "//*[@class='pagination_next']/a/@href"
+        "detail" :"//*[@class='product_img_link']",
+        "next_page" : "//*[@class='pagination_next']/a"
     }
 }

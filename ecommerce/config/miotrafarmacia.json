@@ -22,7 +22,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" :"//*[@itemprop='url']/@href",
-        "next_page" : "//li[contains(@class,'next')]/a/@href"
+        "detail" :"//*[@itemprop='url']",
+        "next_page" : "//li[contains(@class,'next')]/a"
     }
 }

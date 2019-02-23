@@ -69,7 +69,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" :"//a[contains(@itemprop,'name')]/@href",
+        "detail" :"//a[contains(@itemprop,'name')]",
         "next_page" : "//div[@class='toolbar-bottom']//a[@class='next i-next']"
     }
 }

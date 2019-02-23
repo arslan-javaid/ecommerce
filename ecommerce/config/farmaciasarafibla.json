@@ -18,7 +18,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" :"//div[@class='foto']//a/@href",
+        "detail" :"//div[@class='foto']//a",
         "next_page" : ""
     }
 }

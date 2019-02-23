@@ -22,7 +22,7 @@
         "timestamp" : ""
     },
     "links" : {
-        "detail" :"//*[@class='product-name']/@href",
-        "next_page" : "//a[@class='icon icon-page-next']/@href"
+        "detail" :"//ul[contains(@class, 'products-grid')]//*[@class='product-name']",
+        "next_page" : "//a[@class='icon icon-page-next']"
     }
 }
